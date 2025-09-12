@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.env
+*.egg-info/
+.dist/
+.build/
+
+# AFREC artifacts
+cases/
+logs/
+secrets/token.enc
+
+# VSCode
+.vscode/

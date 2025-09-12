@@ -1,0 +1,39 @@
+[project]
+name = "afrec"
+version = "0.1.0"
+description = "AFREC - Adquisición Forense de Recursos en la Nube (Dropbox)"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "dropbox>=11.36.0",
+    "typer>=0.12.0",
+    "rich>=13.0.0",
+    "pandas>=2.0.0",
+    "reportlab>=4.0.0",
+    "python-dateutil>=2.8.0",
+    "python-dotenv>=1.0.0",
+    "cryptography>=42.0.0",
+    "requests>=2.31.0",
+]
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "black>=24.0.0",
+    "ruff>=0.5.0",
+    "mypy>=1.8.0",
+]
+[project.scripts]
+afrec = "afrec.cli:app"
+
+[tool.black]
+line-length = 100
+
+[tool.ruff]
+line-length = 100
+select = ["E", "F", "I"]
+ignore = []
+
+[tool.mypy]
+python_version = "3.8"
+warn_unused_configs = true
+disallow_untyped_defs = false
