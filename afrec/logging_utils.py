@@ -1,3 +1,7 @@
+""" Aquí se Configura un sistema de logging en JSON.
+Registra cada paso importante en log.txt.
+Facilita auditorías y depuración. """
+
 from __future__ import annotations
 
 import json

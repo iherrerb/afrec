@@ -1,3 +1,11 @@
+""" Aquí se registra el contexto de una sesión de adquisición:
+ID único (UUID).
+Actor (usuario/perito).
+Dirección IP.
+Hora de inicio (UTC).
+Guarda esta información en session.json dentro de cada caso.
+Asocia todos los artefactos a una sesión identificable. """
+
 from __future__ import annotations
 
 import json

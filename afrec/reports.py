@@ -1,3 +1,13 @@
+""" Aquí se genera el reportes de adquisición:
+write_json → exporta datos a JSON.
+write_csv → exporta a CSV.
+generate_pdf_report → crea un PDF con datos de sesión y resumen de adquisición.
+El PDF incluye:
+* Fecha de generación.
+* Datos de sesión (ID, actor, IP, timestamp).
+* Resumen (archivos, hashes, rutas).
+Da un formato legible para peritos y jueces. """
+
 from __future__ import annotations
 
 import csv

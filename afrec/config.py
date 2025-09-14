@@ -1,3 +1,8 @@
+""" Aquí se Maneja la configuración global del proyecto.
+Carga variables desde .env (ejemplo: DROPBOX_APP_KEY, DROPBOX_APP_SECRET).
+Define rutas estándar (cases/, logs/, secrets/).
+Garantiza consistencia y centralización de parámetros. """
+
 from __future__ import annotations
 
 import os

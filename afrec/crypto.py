@@ -1,3 +1,11 @@
+""" Gestiona el cifrado seguro de tokens OAuth2.
+Usa cryptography.Fernet con clave derivada de una passphrase (PBKDF2 + SHA-256).
+Archivos cifrados se guardan como secrets/token.enc.
+Funciones principales:
+TokenStore.save() → guarda token cifrado.
+TokenStore.load() → descifra token cuando se usa. 
+Protege credenciales sensibles de Dropbox"""
+
 from __future__ import annotations
 
 import base64

@@ -1,3 +1,12 @@
+""" Esta es la interfaz de línea de comandos (CLI) de AFREC.
+Usa Typer y Rich para crear comandos con buena experiencia en consola.
+Contiene los comandos principales:
+* afrec auth → flujo OAuth2 y guardado del token.
+* afrec preview → genera inventario lógico (JSON/CSV).
+* afrec acquire → adquiere evidencias, genera hashes, reportes y cadena de custodia.
+Se conecta con el resto de módulos (explorer, downloader, reports, custody). 
+Es el punto de entreda para los usuarios"""
+
 from __future__ import annotations
 
 from pathlib import Path

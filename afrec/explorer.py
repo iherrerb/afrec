@@ -1,3 +1,11 @@
+""" Aquí se Gestiona la exploración del espacio de archivos en Dropbox (files/list_folder).
+Permite:
+* Listado recursivo de carpetas.
+* Filtrado por extensión y rango de fechas.
+* Generación de inventarios (inventario.json, inventario.csv).
+* Cada elemento incluye metadatos: nombre, ruta, tamaño, fechas, hash remoto (content_hash).
+Es la base del inventario lógico de evidencias. """
+
 from __future__ import annotations
 
 from dataclasses import asdict, dataclass

@@ -1,3 +1,14 @@
+""" Aquí se Calcula hashes de integridad.
+Funciones:
+* hash_file → SHA-256 o MD5 de un archivo local.
+* dropbox_content_hash → implementa el mismo algoritmo de Dropbox para validar descargas.
+* build_hash_record → genera un registro con:
+* ruta local y en Dropbox,
+* hashes locales,
+* content_hash remoto,
+* comparación (yes/no/n-a).
+Confirma que los archivos adquiridos son idénticos a los de Dropbox. """
+
 from __future__ import annotations
 
 import hashlib

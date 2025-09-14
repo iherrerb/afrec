@@ -1,3 +1,9 @@
+""" Aquí se Maneja la descarga controlada de archivos desde Dropbox (files/download).
+Incluye un sistema de reintentos automáticos en caso de fallos o rate limits.
+Guarda cada archivo en la carpeta cases/.../evidence/.
+Tras cada descarga, genera registros de integridad con integrity.py.
+Garantiza descargas completas y confiables. """
+
 from __future__ import annotations
 
 import time

@@ -1,3 +1,12 @@
+""" Aquí se Implementa la cadena de custodia digital.
+Registra cada acción (PREVIEW, ACQUIRE, etc.) en un archivo cadena_custodia.jsonl.
+Cada entrada incluye:
+Timestamp UTC.
+Actor (perito/usuario).
+Acción realizada.
+Detalles asociados (ruta, número de archivos, carpeta del caso). 
+Es clave para trazabilidad y validez probatoria."""
+
 from __future__ import annotations
 
 import json

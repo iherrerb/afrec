@@ -1,3 +1,8 @@
+"""
+Verifica que hash_file genera hashes válidos.
+Crea un archivo temporal, calcula SHA-256 y MD5, y valida que no estén vacíos.
+Asegura que los algoritmos de hashing, base de la integridad forense, funcionan. """
+
 from pathlib import Path
 from afrec.integrity import hash_file
 

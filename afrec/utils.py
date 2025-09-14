@@ -1,3 +1,8 @@
+""" Funciones utilitarias de apoyo.
+Ejemplo:
+utc_now_iso() → timestamp en UTC.
+save_json() → guardar cualquier objeto en JSON. """
+
 from __future__ import annotations
 
 import json
