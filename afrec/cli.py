@@ -153,7 +153,7 @@ def acquire(
     )
     exts = [e.strip() for e in ext.split(",")] if ext else None
     items = list_inventory(client, root=path, exts=exts, date_from=date_from, date_to=date_to)
-    # Persist inventory
+   
     session.save(case_dir / "session.json")
     save_inventory_json(items, inventory_json)
     save_inventory_csv(items, inventory_csv)
@@ -207,7 +207,7 @@ def ensure_client(settings: Settings) -> Tuple[Dropbox, str, str]:
     dbx = _build_client(bundle, settings)
     try:
         acct = dbx.users_get_current_account()
-    except AuthError as e:  # pragma: no cover
+    except AuthError as e:  
         raise typer.BadParameter("Token inválido o expirado. Ejecute 'afrec auth' nuevamente.") from e
     actor = acct.name.display_name or "unknown"
     return dbx, actor, bundle.fingerprint()

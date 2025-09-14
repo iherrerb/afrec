@@ -16,15 +16,15 @@ load_dotenv(override=True)
 
 @dataclass(frozen=True)
 class Settings:
-    # Filesystem
+    # Archivos del sistema
     repo_root: Path
     cases_dir: Path
     logs_dir: Path
     secrets_dir: Path
-    # Dropbox App credentials (OAuth2)
+    # Credenciales de Dropbox (OAuth2)
     dropbox_app_key: Optional[str] = None
     dropbox_app_secret: Optional[str] = None
-    # Execution
+    
     timezone: str = "UTC"
 
     @staticmethod

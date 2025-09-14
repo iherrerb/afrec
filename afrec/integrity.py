@@ -16,9 +16,9 @@ from pathlib import Path
 from typing import Dict, Optional
 
 try:
-    from dropbox.dropbox_content_hasher import DropboxContentHasher
+   from dropbox.dropbox_content_hasher import DropboxContentHasher
 except Exception:  # pragma: no cover
-    DropboxContentHasher = None  # type: ignore
+   DropboxContentHasher = None  # type: ignore
 
 
 def hash_file(path: Path, algo: str = "sha256", chunk_size: int = 1024 * 1024) -> str:
@@ -47,7 +47,7 @@ def dropbox_content_hash(path: Path, chunk_size: int = 4 * 1024 * 1024) -> Optio
                 hasher.update(block)
         return hasher.hexdigest()
     else:
-        # Fallback manual
+        
         block_hashes = []
         with open(path, "rb") as fh:
             while True:

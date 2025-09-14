@@ -13,7 +13,7 @@ from typing import Any, Dict
 
 
 class JsonFormatter(logging.Formatter):
-    def format(self, record: logging.LogRecord) -> str:  # type: ignore[override]
+    def format(self, record: logging.LogRecord) -> str:  
         data: Dict[str, Any] = {
             "ts": datetime.now(timezone.utc).isoformat(),
             "level": record.levelname,
@@ -34,7 +34,7 @@ class JsonFormatter(logging.Formatter):
 def setup_logging(log_file: Path | None = None) -> logging.Logger:
     logger = logging.getLogger("afrec")
     logger.setLevel(logging.INFO)
-    # Avoid duplicate handlers
+   
     if not logger.handlers:
         sh = logging.StreamHandler(sys.stdout)
         sh.setFormatter(JsonFormatter())

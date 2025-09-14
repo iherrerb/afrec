@@ -35,7 +35,7 @@ def _derive_key(passphrase: str, salt: bytes) -> bytes:
 class TokenBundle:
     access_token: str
     refresh_token: str | None = None
-    expires_at: str | None = None  # ISO8601
+    expires_at: str | None = None  # formato de tiempo estándar ISO8601
 
     def fingerprint(self) -> str:
         import hashlib
